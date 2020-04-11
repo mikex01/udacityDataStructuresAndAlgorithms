@@ -1,0 +1,46 @@
+Worst-Case Big-O Notation
+-------------------------
+
+with the help of the url https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt my analysis is as follows.
+
+Task0
+    I repeatedly use the operation index of the list structure but its always gonna take the same amount of time.
+    
+    A: -> O(1)
+---------------
+
+Task1
+    There is 1 for loop iterating over all_register = texts + calls    O(N)
+
+    A: -> 0(N)
+---------------
+
+Task2
+    There is 2 for loop iterating calls
+    for call in calls               O(N)
+        for num_phone in call[:2]   O(N) +
+
+    when sort the result :          O(N Log N) +
+    O(N) + O(N) + O(N Log N) = O(N)
+    A: -> O(N)
+---------------
+
+Task3
+    There is 1 for loop iterating and an id dind a character
+    for phone in b_call: O(N)
+        if '(' in phone: O(N) *
+    
+    when sort the result : O(N Log N) +
+    A: -> O(N**2)
+---------------
+
+Task4
+    I wrote three fors to make two list, O(N) + O(N) + O(N) = O(N + N + N) = O(3N) = O(N)
+    but when I exclude the list possible_telemarketers in not_telemarketers it takes me longer time,
+    for pt in possible_telemarketers:   O(N)
+        if pt not in not_telemarketers: O(N) *
+        
+    when sort the result :              O(N Log N) +
+
+    A: -> O(N**2)
+---------------
