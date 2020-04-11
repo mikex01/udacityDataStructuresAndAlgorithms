@@ -20,3 +20,15 @@ Print a message:
 September 2016.".
 """
 
+def longest_time(calls):
+    """ Return a list of the number spent the longest time """
+    
+    dict_calls = {}
+    for call in calls:
+        for num_phone in call[:2]:
+            dict_calls[num_phone] = dict_calls.get(num_phone, 0) + int(call[3])
+    last_tuple = sorted(dict_calls.items(), key=lambda item: item[1])[-1]
+    return list(last_tuple)
+
+print("\n{0} spent the longest time, {1} seconds, on the phone during September 2016." \
+      .format(longest_time(calls)[0], longest_time(calls)[1]))

@@ -18,6 +18,7 @@ Print messages:
 "First record of texts, <incoming number> texts <answering number> at time <time>"
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
+
 print("\nFirst record of texts, {0} texts {1} at time {2}" \
       .format(texts[0][0],texts[0][1],texts[0][2]))
 print("Last record of calls, {0} calls {1} at time {2}, lasting {3} seconds" \
