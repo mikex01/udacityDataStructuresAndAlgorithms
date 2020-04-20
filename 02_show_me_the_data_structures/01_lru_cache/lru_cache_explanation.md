@@ -9,4 +9,4 @@ On the other hand, we have the **DoubleLinkedList** to order data, when data is 
 
 In conclusion, what we get from LRU Cache is time, but we lose a bit of space because it requires two data structures for implementation. See figure rlu_cache
 
-![hola](https://github.com/mikex01/udacityDataStructuresAndAlgorithms/blob/master/02_show_me_the_data_structures/01_lru_cache/lru_cache.png?raw=true)
+![rlu_cache](https://github.com/mikex01/udacityDataStructuresAndAlgorithms/blob/master/02_show_me_the_data_structures/01_lru_cache/lru_cache.png?raw=true)
