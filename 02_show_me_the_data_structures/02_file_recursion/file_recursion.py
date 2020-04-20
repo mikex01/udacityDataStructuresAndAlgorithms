@@ -1,3 +1,5 @@
+import os
+
 def find_files(suffix, path):
     """
     Find all files beneath path with file name suffix.
@@ -14,4 +16,19 @@ def find_files(suffix, path):
     Returns:
        a list of paths
     """
-    return None
+    files_finded = []
+    # validation
+    if len(suffix) !=0 and os.path.isdir(path):
+        dirs = os.listdir(path)
+        for file in dirs:
+            if os.path.isfile(path + file):
+                if file.endswith(suffix):
+                    files_finded.append(os.path.join(path, file))
+            else:
+                files_finded += find_files(suffix, os.path.join(path, file) + "/") #assuming it's linux
+    return files_finded
+
+#   TEST
+path = './'
+for f in find_files('.c', path):
+    print(f)
